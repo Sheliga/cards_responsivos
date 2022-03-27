@@ -1,0 +1,114 @@
+/* import fonts from fonts.css file*/
+@import url(./fonts.css);
+
+/* import variables from _variables.css file*/
+@import url(./partials/_variables.css);
+
+/* import  __global.css file*/
+@import url(./partials/__global.css);
+
+*{
+    font-family: var(--roboto), sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background: var(--gradient-color);
+    align-items: center;
+    display: flex;
+    justify-content: center;     
+    color:#434343
+}
+main.cards{
+    display: flex;
+    padding: 32px;    
+}
+
+main.cards section.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 32px;
+}
+main.cards section.card:first-child{
+    margin-left: 0;
+}
+main.cards section.card .icon {
+    width: 64px;
+    height: 64px;
+}
+
+main.cards section.card img {   
+    width: 100%;
+}
+
+main.cards section.card h3{
+    font-size: 100%;
+    margin: 16px 0;
+}
+
+main.cards section.card span{
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+main.cards section.card button {   
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+
+}
+
+main.cards section.card.html5 button {
+    background: linear-gradient(to right, #e04628, #DFCBFF);
+}
+
+main.cards section.card.css3 button {
+    background: linear-gradient(to right, #326cb7, #DFCBFF);
+}
+
+main.cards section.card.javascript button {
+    background: linear-gradient(to right, #eae149, #DFCBFF);
+}
+
+main.cards section.card.html5{
+    box-shadow: 20px 20px 50px -30px #f0684d;
+}
+main.cards section.card.css3{
+    box-shadow: 20px 20px 50px -30px #4d86d1;
+}
+main.cards section.card.javascript{
+    box-shadow: 20px 20px 50px -30px #ebe45e;
+}
+
+
+@media screen and (max-width:720px) {
+    main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card{
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+    
+    main.cards section.card:last-child{
+        margin-bottom: 0;
+    }
+
+    main.cards section.card button{
+        font-size: 70%;
+    }
+    
+}
